@@ -12,7 +12,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.dbGUIController">
    <center>
-      <Pane BorderPane.alignment="CENTER">
+      <Pane stylesheets="@application.css" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="26.0" layoutY="14.0" prefHeight="28.0" prefWidth="155.0" text="Northwind">
                <font>

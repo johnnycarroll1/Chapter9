@@ -1,6 +1,5 @@
 package application;
 
-import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -12,10 +11,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
-
 public class dbGUIController implements Initializable {
 	
-	Connection conn = ConnectDatabase.dbConnect("jdbc:sqlserver://192.168.1.127:1433","ch2","password");
+	Connection conn = ConnectDatabase.dbConnect("jdbc:sqlserver://69.174.152.246:20653","ch2","password");
 	
 	@FXML
 	private Label lblCustomerCount;
@@ -30,7 +28,7 @@ public class dbGUIController implements Initializable {
 	
 	@FXML
 	void setLastNames() {
-		ArrayList lastNames = ConnectDatabase.getCustomerLastNames(conn, "Use Northwind; SELECT * FROM Customers","ContactName");
+		ArrayList<?> lastNames = ConnectDatabase.getCustomerLastNames(conn, "Use Northwind; SELECT * FROM Customers","ContactName");
 		for (Object name : lastNames) {
 			txtFieldLastNames.appendText(name.toString() + "\n");
 		}

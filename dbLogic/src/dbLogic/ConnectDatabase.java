@@ -125,12 +125,12 @@ public class ConnectDatabase {
 	}
 	
 	public static void main(String[] args){
-		Connection conn = dbConnect("jdbc:sqlserver://192.168.1.127:1433","ch2","password");
-		//getColumnLabels(conn, "Use Northwind; SELECT * FROM Customers");
+		Connection conn = dbConnect("jdbc:sqlserver://69.174.152.246:20653","ch2","password");
+		getColumnLabels(conn, "Use Northwind; SELECT * FROM Customers");
 		System.out.println("\nUsers in database: ");
 		getCustomerLastNames(conn, "Use Northwind; SELECT * FROM Customers","ContactName");
-		//System.out.print("\nNumber of users in database: ");
-		//singleQueryDB(conn, "Use Northwind; SELECT COUNT(*) FROM Customers",1);
+		System.out.print("\nNumber of users in database: ");
+		singleQueryDB(conn, "Use Northwind; SELECT COUNT(*) FROM Customers",1);
 		closeConnection(conn);
 		
 	}
